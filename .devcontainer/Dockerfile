@@ -13,6 +13,7 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 # #RUN su node -c "main.js"
 
 # # [Optional] Uncomment if you want to install more global node packages
+RUN "npm install -g parcel-bundler"
 RUN su node -c "npm install -g package.json"
 
 # RUN npm install -g "package.json"
