@@ -15,7 +15,6 @@ const server = http.createServer((req, res) => {
 })
 
 const PORT = 8080
-
 server.listen(PORT, "0.0.0.0", () => {
     console.log('the server is listening at port: {0}', PORT)
 })
