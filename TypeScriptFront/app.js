@@ -2,6 +2,8 @@
 // @ts-check
 /* eslint-disable-next-line no-console */
 
+// 2021 11 28, parcel index.html을 통해서 계속 뛰어놓자.
+
 for(let j = 1; j < 5; ++j) {
     const ajax = new XMLHttpRequest();
     
@@ -27,8 +29,12 @@ for(let j = 1; j < 5; ++j) {
     const ul = document.createElement('ul');
     for (let i = 0; i < 10; ++i) {
         const li = document.createElement('li');    
-        li.innerHTML = newsFeed[i].title;
+        const anchorTag = document.createElement('a');        
+
+        anchorTag.href = 'http://naver.com'
+        anchorTag.innerHTML = `${newsFeed[i].title} (${newsFeed[i].comments_count}}`;
         ul.append(li);
+        li.append(anchorTag);
     }
     
     document.getElementById('root').append(ul);
